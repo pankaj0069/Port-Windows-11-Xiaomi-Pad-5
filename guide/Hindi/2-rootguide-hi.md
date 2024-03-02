@@ -33,4 +33,4 @@
 fastboot flash boot <magisk_patched.img>
 ```
 
-### [अगला चरण : Windows इंस्टॉल करना ](/guide/hindi/3-install-hi.md)
+### [अगला चरण : Windows इंस्टॉल करना ](/guide/Hindi/3-install-hi.md)
