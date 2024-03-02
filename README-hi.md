@@ -24,11 +24,11 @@
 
 ## तो चलिए शुरू करते हैं
 
-- [इंस्टाल करना](guide/hindi/1-partition-hi.md)
+- [इंस्टाल करना](guide/Hindi/1-partition-hi.md)
 
-- [डुअल बुट को सेटअप करना](guide/hindi/dualboot-hi.md)
+- [डुअल बुट को सेटअप करना](guide/Hindi/dualboot-hi.md)
 
-- [अनइंस्टाल करना](guide/hindi/uninstall-hi.md)
+- [अनइंस्टाल करना](guide/Hindi/uninstall-hi.md)
 
 
 ## विवीध आइटम
