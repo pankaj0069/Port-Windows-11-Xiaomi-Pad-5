@@ -28,7 +28,7 @@
 - platform tools फ़ोल्डर में command prompt को खोले 
 
  ## अब magisk से पैच की हुई बूट इमेज को टेबलेट मे flash करना 
- >  `<magisk_patched.img>` की जगह असली ```magisk_patched.img```का path dale
+ >  `<magisk_patched.img>` की जगह असली ```magisk_patched.img```का path डाले 
 ```cmd
 fastboot flash boot <magisk_patched.img>
 ```
