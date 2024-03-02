@@ -72,4 +72,4 @@ adb reboot
 ```
 
 
-### [अगला चरण : रूट करना ](/guide/hindi/2-rootguide-hi.md)
+### [अगला चरण : रूट करना ](/guide/Hindi/2-rootguide-hi.md)
