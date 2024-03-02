@@ -3,34 +3,34 @@
 
 # Running Windows on the Xiaomi Pad 5
 
-## Get root 
+## रूट करने की प्रक्रिया 
 > [!NOTE]
-> **If you already have root just skip this step and go to the next page**
+> **अगर आपने पहले से ही रूट कर रखा है तो इस पेज पर दिए गए स्टेप छोड़ दे और अगले पेज पर चले जाए **
 
-### Prerequisites
-- ```Brain```
+### सबसे जरूरी चीज 
+- ```दिमाग भाई दिमाग ```
   
-- [```Android boot backup```](/guide/English/1-partition-en.md#Make-a-backup-of-your-existing-boot-image) (which you backed up on the first guide page)
+- [```Android boot backup```](/guide/English/1-partition-en.md#Make-a-backup-of-your-existing-boot-image) (जो आपने पहले पेज पर बैकअप लिया था )
 
 
 ## Patch boot 
 
-- Copy the ```normal_boot.img``` file from the ```platform tools``` folder onto the tablet 
+- ```normal_boot.img``` को कंप्युटर के ```platform tools``` फ़ोल्डर से टेबलेट मे कॉपी कर ले। 
 
-- Download and install the [Magisk app](https://github.com/topjohnwu/Magisk/releases/latest) on the tablet
+- [Magisk app](https://github.com/topjohnwu/Magisk/releases/latest) को डाउनलोड करके टेबलेट में इंस्टाल कर ले।
   
--  Open the Magisk app and click the ```Install``` button. Select ```Select and Patch a File``` option and find the ```normal_boot.img``` file that you copied to the tablet. Click the ```Let's Go``` button and wait for the patching process to complete.
+- magisk ऐप खोले ```Install``` बटन पर क्लिक करें। फिर ```Select and Patch a File``` पर क्लिक करें और ```normal_boot.img``` जो कि आपने कंप्युटर से टेबलेट मे डाली थी को सेलेक्ट करे। अब ```Let's Go``` बटन पर क्लिक कर दे ओर प्रोसेस पूरा होने दें।
   
-- Copy the ```magisk_patched....img``` file from the ```Downloads``` folder on the tablet to the ```platform tools``` folder on your computer. 
+- अब ```magisk_patched....img``` बूट इमेज को टेबलेट के ```Downloads``` फ़ोल्डर से उठा कर कंप्युटर के ```platform tools``` फ़ोल्डर मे कॉपी कर दे। 
 
-- Reboot to fastboot
+- अब fastboot mode मे reboot करे 
   
-- Open command prompt in the platform tools folder 
+- platform tools फ़ोल्डर में command prompt को खोले 
 
- ## Flash patched boot 
- > Replace `<magisk_patched.img>` with the actual ```magisk_patched.img``` name/path.
+ ## अब magisk से पैच की हुई बूट इमेज को टेबलेट मे flash करना 
+ >  `<magisk_patched.img>` की जगह असली ```magisk_patched.img```का path dale
 ```cmd
 fastboot flash boot <magisk_patched.img>
 ```
 
-### [Next step: Installing Windows](/guide/English/3-install-en.md)
+### [अगला चरण : Windows इंस्टॉल करना ](/guide/hindi/3-install-hi.md)
