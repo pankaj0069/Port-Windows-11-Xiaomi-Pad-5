@@ -7,11 +7,11 @@
 
 ## इंस्टॉल कराना 
 > [!NOTE]
-> अब CMD या powershell को एडमिनिस्ट्रेटर की तरह खोलना पड़ेगा, and then access the platform-tools folder using the `cd C:\path\to\platform-tools` command, replacing the path with the actual path of the folder.
-> Use the same window in the entire guide, do not close it.
+> अब CMD या powershell को एडमिनिस्ट्रेटर की तरह खोलना पड़ेगा, फिर platform-tools फ़ोल्डर को `cd C:\path\to\platform-tools` command का इस्तेमाल करते हुए एक्सेस करे, path को platform-tools के वास्तविक पाथ से बदल दे।
+>सारी गाइड मे एक ही cmd या powershell विंडों यूज करे इसे बंद ना करे।
 
-### Prerequisites
-- ```Brain```
+### आवश्यक फाइल 
+- ```बुद्धी ```
 
 - [```UEFI image```](https://github.com/erdilS/Port-Windows-11-Xiaomi-Pad-5/releases/download/UEFI/uefi-v3.img)
   
@@ -19,61 +19,61 @@
     
 - [```Drivers```](https://github.com/map220v/MiPad5-Drivers/releases/latest)
 
-### Boot back into recovery to start installing Windows
+### windows इन्स्टाल करने के लिए फिर से रिकवरी मे बूट करे
 
 ```cmd
 fastboot boot <recovery.img>
 ```
 
-#### Execute msc 
+####  msc एग्जीक्यूट करे 
 
-> If it asks you to run it once again, do so
+> अगर यह आप को फिर से cmd रन करने को बोले तो कर दे
 
 ```cmd
 adb shell msc
 ```
-### Assign letters to disks
+### डिस्क पर latter Assign करना 
   
 
-#### Start the Windows disk manager
+#### Windows disk manager को शुरू करे 
 
-> Once the Xiaomi Pad 5 is detected as a disk
+> एक बार Xiaomi Pad 5 डिस्क की तरह दिखाई देने लगे तो आगे बडे 
 
 ```cmd
 diskpart
 ```
 
 
-#### Assign `X` to Windows volume
+#### windows वॉल्युम पर `X` Assign करना
 
-#### Select the Windows volume of the tablet
-> Use `list volume` to find it, it's the one named "WINNABU"
+#### टेबलेट पर Windows volume को चुनें 
+> `list volume` cmd का इस्तेमाल करके इसको ढूँढे इसका नाम "WINNABU" होगा। 
 
 ```diskpart
 select volume <number>
 ```
 
-#### Assign the letter X
+#### इसपर अक्षर X को assign करे 
 ```diskpart
 assign letter x
 ```
 
-### Assign `Y` to ESP volume
+### ESP वॉल्युम पर `Y` assign करना
 
-#### Select the esp volume of the tablet
-> Use `list volume` to find it, it's the one named "ESPNABU"
+#### टेबलेट का esp volume को चुनें
+> `list volume`cmd का इस्तेमाल करके इसको ढूँढे इसका नाम "ESPNABU" होगा। 
 
 ```diskpart
 select volume <number>
 ```
 
-#### Assign the letter Y
+#### Assign the letter इसपर अक्षर Y को assign करे 
 
 ```diskpart
 assign letter y
 ```
 
-#### Exit diskpart
+#### diskpart से निकल जाएं 
 ```diskpart
 exit
 ```
