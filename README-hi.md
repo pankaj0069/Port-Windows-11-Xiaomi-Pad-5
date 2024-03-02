@@ -43,7 +43,7 @@
 
 - [UEFI को अपडेट करना](guide/English/UEFI-updating-hi.md)
 
-- [जरूरी निर्देश और apps ](guide/English/Additional-materials-hi.md)
+- [जरूरी निर्देश और एप्स](guide/English/Additional-materials-hi.md)
 
 
 
