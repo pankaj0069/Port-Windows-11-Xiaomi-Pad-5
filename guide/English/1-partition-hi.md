@@ -3,20 +3,20 @@
 
 # Running Windows on the Xiaomi Pad 5
 
-## Installation
+## इंस्टॉल करना 
 
 
 
-### Prerequisites
--  ```Brain```
+### आवश्यक शर्तें 
+-  ```खोपड़ी मे दिमाग```
   
-- [```Recovery Image```](https://github.com/erdilS/Port-Windows-11-Xiaomi-Pad-5/releases/download/1.0/recovery.img)
+- [```रिकवरी इमेज ```](https://github.com/erdilS/Port-Windows-11-Xiaomi-Pad-5/releases/download/1.0/recovery.img)
 
-- [```Android platform tools```](https://developer.android.com/studio/releases/platform-tools)
+- [```एंड्रॉयड प्लेटफॉर्म टूल्स ```](https://developer.android.com/studio/releases/platform-tools)
 
-### Notes:
-> [!NOTE]
-> Don't know how to start? Just unzip the downloaded [```Android platform tools```](https://developer.android.com/studio/releases/platform-tools), for example ```"C:\platform-tools"``` then open ```command prompt``` or `powershell` as administrator and type:
+### टिप्पणियां :
+> [!टिपणी]
+> नहीं पता केसे स्टार्ट करे ? Just unzip the downloaded [```Android platform tools```](https://developer.android.com/studio/releases/platform-tools), for example ```"C:\platform-tools"``` then open ```command prompt``` or `powershell` as administrator and type:
 ```cmd
 cd "path\to\platform-tools"
 ```
