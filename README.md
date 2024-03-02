@@ -10,37 +10,39 @@
 
 ## ⚠️ Warning
 
-We're not responsible for bricked devices, missing recovery partitions, dead xiaomi factoryline workers cowboys, dead pmics, dead ram, dead display ics, dead cpus, any xiaomi shenanigans, dead cats or dogs, nuclear wars or you getting fired because you forgot to boot back in to android for the alarm.
+हमारी कोई गारंटी नहीं है कि आपके mi pad 5 के साथ कोई दुर्घटना घट जाए, आपके डिवाइस की रैम,स्टोरेज,प्रोसेसर,आदि चीजे विलुप्त हो जाए आपके गाव या शहर मे कोई लठबाजी हो जाए या फिर आपके नुक्कड की दुकान में चाय सिगरेट मिलना बंद हो जाए, तो अगर आपका दिमाग घुटनों मे है तो इससे 69 सेंटीमीटर की दूरी बना कर रखे 
 
-This project is in development stage, all the files here have been contributed by other users, here you will find a guide with the working files we managed to get. This is a delicate process, do it under your own risk and follow all the steps carefully.
-
-**IF YOU AREN'T COMFORTABLE MODDING YOUR TABLET OR ITS PARTITION TABLE OR YOU ARE PARANOID OF BRICKING YOUR DEVICE CLICK AWAY NOW!!! YOU HAVE BEEN WARNED, YOU ARE ON YOUR OWN IF YOU BRICK YOUR DEVICE!!! AGAIN! YOU HAVE BEEN WARNED!!!**
-> [!WARNING]
-> **PLEASE DON'T USE VIDEO GUIDES ON YOUTUBE OR ANY OTHER PLATFORM! THESE VIDEOS ARE OUTDATED AND YOU CAN BRICK YOUR DEVICE USING THEM! IF YOU ABSOLUTELY NEED A VIDEO GUIDE, USE THIS [VIDEO GUIDE](https://youtu.be/BbgTbTGbXYg) BY [ArtoSeVeN](https://www.youtube.com/channel/UCYjwfxlYlJ7Nnzv01oszQvA)**
+इस प्रोजेक्ट का कार्य अभी प्रगति पर है , सभी फाइल दूसरे यूजर के द्वारा दी गई है, यहां पर आप सभी काम कर रहीं फाइल को यूज करने का तरीका जानोगे। य़ह काफी ज्यादा नाजुक प्रकरण है, तो सारा काम ध्यानपूर्वक और अपनी रिस्क पर करे ओर सारे के सारे स्टेप को सही से क्रमानुसार करे।
 
 
-## Get Started
-
-- [Installation](guide/English/1-partition-en.md)
-
-- [Dualboot Setup](guide/English/dualboot-en.md)
-
-- [Uninstallation](guide/English/uninstall-en.md)
+** अगर आप अपने टेबलेट की मोडिंग करने या फिर टेबलेट के "partation टेबल" को मोड करने के लिए तैयार नहीं हो तो यहां से पहली फुर्सत मे निकल जाए नहीं तो लोमड़े भी लग सकते हैं, हाँ तो एक बार और सोच लो कि आप अपने टेबलेट को एक ईंट बनाता हुआ देख सकते हो क्या, अगर आपकी टेबलेट हमेसा के लिए ईंट बन जाए तो हमारी कोई गारंटी नहीं होगी। तो आखिरी बार 'सावधान रहें सतर्क रहे' ! **
+> [सावधानियां]
+> **हाँ तो भाई और उनकी बहनों यूट्यूब और अन्य प्लेटफॉर्म की वीडियो गाइड का यूज कदापि नां करे वो सब गाइड आपकी टेबलेट को ब्रिक कर सकती है।अगर फिर भी तुम्हारा दिमाग सरक कर घुटनों के पास आ गया है और आपको कुछ समझ नहीं आ रहा है तो केवल इस वीडियो का उपयोग करें (https://youtu.be/BbgTbTGbXYg) BY [ArtoSeVeN](https://www.youtube.com/channel/UCYjwfxlYlJ7Nnzv01oszQvA)**
+सावधानी हटी दुघर्टना घटी
 
 
-## Miscellaneous
+## चलिए शुरू करते हैं
 
-- [Project Status](guide/English/status.md)
+- [इंस्टाल करना](guide/English/1-partition-en.md)
 
-- [Troubleshooting](guide/English/troubleshooting-en.md)
+- [Dualboot को सेटअप करना](guide/English/dualboot-en.md)
 
-- [Updating Drivers](guide/English/update-en.md)
+- [अनइंस्टाल करना](guide/English/uninstall-en.md)
 
-- [Reinstallation](guide/English/reinstall-en.md)
 
-- [Updating UEFI](guide/English/UEFI-updating-en.md)
+## विवीध आइटम
 
-- [Useful apps and instructions](guide/English/Additional-materials-en.md)
+- [प्रोजेक्ट स्थिति ](guide/English/status.md)
+
+- [परेशानियों के हल](guide/English/troubleshooting-en.md)
+
+- [ड्राइवर को अपडेट करना](guide/English/update-en.md)
+
+- [दुबारा इन्स्टॉल करना](guide/English/reinstall-en.md)
+
+- [UEFI को अपडेट करना](guide/English/UEFI-updating-en.md)
+
+- [जरूरी निर्देश और apps ](guide/English/Additional-materials-en.md)
 
 
 
