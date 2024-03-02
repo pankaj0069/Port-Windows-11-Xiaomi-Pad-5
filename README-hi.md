@@ -24,26 +24,26 @@
 
 ## चलिए शुरू करते हैं
 
-- [इंस्टाल करना](guide/English/1-partition-en.md)
+- [इंस्टाल करना](guide/English/1-partition-hi.md)
 
-- [Dualboot को सेटअप करना](guide/English/dualboot-en.md)
+- [Dualboot को सेटअप करना](guide/English/dualboot-hi.md)
 
-- [अनइंस्टाल करना](guide/English/uninstall-en.md)
+- [अनइंस्टाल करना](guide/English/uninstall-hi.md)
 
 
 ## विवीध आइटम
 
 - [प्रोजेक्ट स्थिति ](guide/English/status.md)
 
-- [परेशानियों के हल](guide/English/troubleshooting-en.md)
+- [परेशानियों के हल](guide/English/troubleshooting-hi.md)
 
-- [ड्राइवर को अपडेट करना](guide/English/update-en.md)
+- [ड्राइवर को अपडेट करना](guide/English/update-hi.md)
 
-- [दुबारा इन्स्टॉल करना](guide/English/reinstall-en.md)
+- [दुबारा इन्स्टॉल करना](guide/English/reinstall-hi.md)
 
-- [UEFI को अपडेट करना](guide/English/UEFI-updating-en.md)
+- [UEFI को अपडेट करना](guide/English/UEFI-updating-hi.md)
 
-- [जरूरी निर्देश और apps ](guide/English/Additional-materials-en.md)
+- [जरूरी निर्देश और apps ](guide/English/Additional-materials-hi.md)
 
 
 
