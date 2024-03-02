@@ -15,7 +15,8 @@
 - [```एंड्रॉयड प्लेटफॉर्म टूल्स ```](https://developer.android.com/studio/releases/platform-tools)
 
 ### टिप्पणियां :
-> [!टिपणी]
+> [!NOTE]
+> 
 > नहीं पता केसे स्टार्ट करे ? पहले डाउनलोड फाइल अनजीप करो [```Android platform tools```](https://developer.android.com/studio/releases/platform-tools), जेसे की ```"C:\platform-tools"``` उसके बाद  ```command prompt``` या फिर `powershell`को as administrator शुरू करे और टाइप करे :
 ```cmd
 cd "path\to\platform-tools"
