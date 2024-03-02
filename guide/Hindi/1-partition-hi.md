@@ -3,70 +3,73 @@
 
 # Running Windows on the Xiaomi Pad 5
 
-## Installation
+## इंस्टॉल करना 
 
 
 
-### Prerequisites
--  ```Brain```
+### आवश्यक शर्तें 
+-  ```खोपड़ी मे दिमाग```
   
-- [```Recovery Image```](https://github.com/erdilS/Port-Windows-11-Xiaomi-Pad-5/releases/download/1.0/recovery.img)
+- [```रिकवरी इमेज ```](https://github.com/erdilS/Port-Windows-11-Xiaomi-Pad-5/releases/download/1.0/recovery.img)
 
-- [```Android platform tools```](https://developer.android.com/studio/releases/platform-tools)
+- [```एंड्रॉयड प्लेटफॉर्म टूल्स ```](https://developer.android.com/studio/releases/platform-tools)
 
-### Notes:
+### टिप्पणियां :
 > [!NOTE]
-> Don't know how to start? Just unzip the downloaded [```Android platform tools```](https://developer.android.com/studio/releases/platform-tools), for example ```"C:\platform-tools"``` then open ```command prompt``` or `powershell` as administrator and type:
+> 
+> नहीं पता केसे स्टार्ट करे ? पहले डाउनलोड फाइल अनजीप करो [```Android platform tools```](https://developer.android.com/studio/releases/platform-tools), जेसे की ```"C:\platform-tools"``` उसके बाद  ```command prompt``` या फिर `powershell`को as administrator शुरू करे और टाइप करे :
 ```cmd
 cd "path\to\platform-tools"
 ```
-> Replace  `"path\to\platform-tools"` with the actual path of the platform tools folder
+> `"path\to\platform-tools"` इस पाथ की जगह जो अभी पाथ है प्लेटफॉर्म टूल फ़ोल्डर का वो डाले
 
 
 > [!Warning]\
-> if you delete any partitions via diskpart later on or now, windows will send a ufs command that gets misinterpreted which erase all your ufs
+> अगर आप diskpart द्वारा कोई partation अब या बाद में डिलीट करते है तो, windows एक ufs कमांड भेजेगी और उसका सिस्टम गलत मतलब निकाल लेगा और आपकी सारी स्टोरेज क्लीन हो जाएगी मतलब सारे partation जो टेबलेट के लिए जरूरी है और डिवाइस ब्रिक हो जाएगी। 
 > 
-> All your data will be erased! Backup now if needed.
+> आपका सारा डाटा डिलीट हो जाएगा तो पहले ही बैकअप ले लेंवे अगर आप के लिए आपका डाटा जरूरी है।
 > 
-> These commands have been tested.
+> ये सारी कमांड टेस्ट की हुई है।
 > 
-> DO NOT REBOOT YOUR TABLET if you think you made a mistake, ask for help in the [Telegram chat](https://t.me/nabuwoa)
+> अपने टेबलेट को बीच में रीबूट ना करे अगर आपको लगता है कि आपसे कोई गलती हो गयी है, तो तुरन्त मदद के लिए [Telegram chat](https://t.me/nabuwoa) पर जाए 
 >
-> **PLEASE DON'T USE OUTDATED VIDEO GUIDES ON YOUTUBE OR ANY OTHER PLATFORM! THESE VIDEOS ARE OUTDATED AND YOU CAN BRICK YOUR DEVICE USING THEM! IF YOU NEED A VIDEO GUIDE, USE THIS [NEW VIDEO GUIDE](https://youtu.be/BbgTbTGbXYg) FROM [ArtoSeVeN](https://www.youtube.com/channel/UCYjwfxlYlJ7Nnzv01oszQvA)**
+> **कृपया पुरानी वीडियो गाइड जो कि यूट्यूब और अन्य प्लेटफॉर्म पर मौजूद है उनका उपयोग ना करे ये आपकी टेबलेट को ब्रिक कर सकती है। अगर फिर भी वीडियो गाइड चाहिए तो ये सिर्फ ये नई गाइड यूज करे 
+> [NEW VIDEO GUIDE](https://youtu.be/BbgTbTGbXYg) FROM [ArtoSeVeN](https://www.youtube.com/channel/UCYjwfxlYlJ7Nnzv01oszQvA)**
 
 
-### Partitioning your device and backup boot
+### windows के लिए Partition बनाना और बूट इमेज का बैकअप लेना
 
-#### Boot recovery through the PC with the command
+#### कंप्युटर के द्वारा ये कमांड लगाकर कस्टम रिकवरी को बूट करे
 ```cmd
 fastboot boot <recovery.img>
 ```
-#### Partitioning your device
+#### अब हमको Partition बनाने है 
 
-> If it asks you to run it once again, do so
+>अगर ये कमांड को दुबारा चलाने को बोले तो चला दे
 
-> This is **optional**, but you can also **set custom sizes (by default, it splits the storage in half)**
+> यह आप पर है यदि आप windows के लिए कस्टम स्टोरेज स्पेस चाहते हैं **(वेसे ये कुछ ना करने पर एंड्रॉयड और windows दोनों को ½ ½ स्टोरेज देगी)**
 
-> To set custom sizes do ```adb shell partition [TARGET WINDOWS SIZE IN GB]```
+> कस्टम स्टोरेज साइज सेट करने के लिए ```adb shell partition [जितना स्टोरेज स्पेस चाहिए वो यहां लिखो]```
 
-> Make sure you do not add GB at the end, just the number
+>ध्यान रखे लास्ट मे GB ना लगाएं सिर्फ नम्बर लगाएं। 
 
 ```cmd
 adb shell partition
 ```
 
-### Make a backup of your existing boot image
+### अब एंड्रॉयड वाली बूट इमेज का बैकअप लेने के लिए ये कमांड चलाए। 
 ```cmd
 adb shell "dd if=/dev/block/platform/soc/1d84000.ufshc/by-name/boot$(getprop ro.boot.slot_suffix) of=/tmp/normal_boot.img" && adb pull /tmp/normal_boot.img
 ```
 
 
-#### Check if Android still starts
-> Reboot to check if Android still works. If it doesn't boot, wipe all data in recovery and try again.
+#### अब चेक करे कि एंड्रॉयड बूट हो रहा है या नहीं 
+> एंड्रॉयड अब भी चल रहा है इसको जाँचने के लिए टेबलेट को reboot करे। अगर ना चले तो रिकवरी मे जाके wipe all data करे और फिर से कोशिश करे 
+>
 
 ```cmd
 adb reboot
 ```
 
 
-### [Next step: Get Root](/guide/English/2-rootguide-en.md)
+### [अगला चरण : रूट करना ](/guide/hindi/2-rootguide-hi.md)
