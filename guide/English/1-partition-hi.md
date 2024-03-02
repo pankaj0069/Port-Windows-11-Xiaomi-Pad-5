@@ -16,7 +16,7 @@
 
 ### टिप्पणियां :
 > [!टिपणी]
-> नहीं पता केसे स्टार्ट करे ? Just unzip the downloaded [```Android platform tools```](https://developer.android.com/studio/releases/platform-tools), for example ```"C:\platform-tools"``` then open ```command prompt``` or `powershell` as administrator and type:
+> नहीं पता केसे स्टार्ट करे ? पहले डाउनलोड फाइल अनजीप करो [```Android platform tools```](https://developer.android.com/studio/releases/platform-tools), for example ```"C:\platform-tools"``` then open ```command prompt``` or `powershell` as administrator and type:
 ```cmd
 cd "path\to\platform-tools"
 ```
