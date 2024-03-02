@@ -1,13 +1,13 @@
 <img align="right" src="https://raw.githubusercontent.com/erdilS/Port-Windows-11-Xiaomi-Pad-5/main/nabu.png" width="425" alt="Windows 11 Running On A Xiaomi Pad 5">
 
 
-# Running Windows on the Xiaomi Pad 5
+# Xiaomi Pad 5 पर windows इस्तेमाल करना
 > [!WARNING]
-> **PLEASE DON'T USE ANY VIDEO GUIDES ON AS THESE ARE USUALLY OUTDATED AND CAN AND PROBABLY WILL BRICK YOUR NABU BY USING THEM!!! IF YOU ABSOLUTELY NEED A VIDEO GUIDE, USE THIS [VIDEO GUIDE](https://youtu.be/BbgTbTGbXYg) BY [ArtoSeVeN](https://www.youtube.com/channel/UCYjwfxlYlJ7Nnzv01oszQvA)**
+> **कृपया किसी भी वीडियो गाइड का उपयोग ना करे वे लगभग सभी पुरानी गाइड है और टेबलेट को ब्रिक कर सकती है। अगर फिर भी वीडियो गाइड यूज करनी है तो सिर्फ यह यूज करे [VIDEO GUIDE](https://youtu.be/BbgTbTGbXYg) BY [ArtoSeVeN](https://www.youtube.com/channel/UCYjwfxlYlJ7Nnzv01oszQvA)**
 
-## Installation
+## इंस्टॉल कराना 
 > [!NOTE]
-> It is recommended to open CMD or powershell as an admin now, and then access the platform-tools folder using the `cd C:\path\to\platform-tools` command, replacing the path with the actual path of the folder.
+> अब CMD या powershell को एडमिनिस्ट्रेटर की तरह खोलना पड़ेगा, and then access the platform-tools folder using the `cd C:\path\to\platform-tools` command, replacing the path with the actual path of the folder.
 > Use the same window in the entire guide, do not close it.
 
 ### Prerequisites
