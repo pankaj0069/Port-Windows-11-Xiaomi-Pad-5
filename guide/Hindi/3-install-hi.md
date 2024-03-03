@@ -7,7 +7,7 @@
 
 ## इंस्टॉल कराना 
 > [!NOTE]
-> अब CMD या powershell को एडमिनिस्ट्रेटर की तरह खोलना पड़ेगा, फिर platform-tools फ़ोल्डर को `cd C:\path\to\platform-tools` command का इस्तेमाल करते हुए एक्सेस करे, path को platform-tools के वास्तविक पाथ से बदल दे।
+> अब CMD या powershell को एडमिनिस्ट्रेटर की तरह खोलना पड़ेगा, फिर platform-tools फ़ोल्डर को `cd C:\path\to\platform-tools` command का इस्तेमाल करते हुए एक्सेस करे, path को platform-tools फ़ोल्डर के वास्तविक पाथ से बदल दे।
 >सारी गाइड मे एक ही cmd या powershell विंडों यूज करे इसे बंद ना करे।
 
 ### आवश्यक फाइल 
@@ -81,72 +81,72 @@ exit
   
   
 
-### Install
+### अब हम windows करेगे इंस्टाल
 
-> Replace `<path\to\install.esd>` with the actual path of install.esd (it may also be named install.wim)
+> Replace `<path\to\install.esd>`की जगह install.esd (इसका नाम 'install.wim' भी हो सकता है)की जो अभी जगह है उसकी लोकेशन डाल दो
 
 ```cmd
 dism /apply-image /ImageFile:<path\to\install.esd> /index:6 /ApplyDir:X:\
 ```
 
-> If you get `Error 87`, check the index of your image with `dism /get-imageinfo /ImageFile:<path\to\install.esd>`, then replace `index:6` with the actual index number of Windows 11 Pro in your image
+> अगर आप को `Error 87`मिलता है , check the index of your image with तो इस `dism /get-imageinfo /ImageFile:<path\to\install.esd>`cmd के द्वारा अपनी इमेज फाइल का इंडेक्स ज्ञात करो, फिर `index:6` की जगह जो नया इंडेक्स नंबर आप को पता चला है वो लगा दो। 
 
 
-### Install Drivers
+### अब करना है Drivers को इंस्टॉल 
 
-> You can download the Drivers [here](https://github.com/map220v/MiPad5-Drivers/releases/latest)
+> आप drivers को [यहां](https://github.com/map220v/MiPad5-Drivers/releases/latest) से डाउनलोड कर सकते हो। 
 
-> If it says `"Automatic WINNABU detection failed! Enter Drive Letter manually"` type **`X`**
+>अब Drivers वाला फ़ोल्डर खोलो और OfflineUpdater.cmd को चला दो 
+>
+>अगर यह बोले `"Automatic WINNABU detection failed! Enter Drive Letter manually"` तो **`X`** डाल दो 
 
-```cmd
- Open the folder with Drivers and run OfflineUpdater.cmd
-```
 
-### Create Windows bootloader files for the EFI
-> If an error occurs when copying boot files, check `diskpart` to see if ESPNABU still has letter Y. If it does not, add any other letter (such as K) and replace the Y in the below command with said letter respectively
+### Windows के लिए EFI के लिए bootloader फाइल को बनाना 
+>अगर बूट फाइल को कॉपी करते समय कोई त्रुटि आती है,तो check `diskpart` मे जाके चेक करो की ESPNABU के पास अभी भी Y अक्षर है अगर नहीं है कि कोई और अक्षर(जेसे की P) डाल दो और नीचे वाले cmd मे Y की जगह जो अभी आप ने नया अक्षर डाला है वो डाल दो। 
 ```cmd
 bcdboot X:\Windows /s Y: /f UEFI
 ```
 
-## Remove the drive letter for ESPNABU
-> If this does not work, ignore it and skip to the next command. This phantom drive will disappear the next time you reboot your PC.
+## Remove the drive letter for ESPNABU का ड्राइव अक्षर हटाना
+> If this does not work अगर य़ह काम ना करे,तो इसको छोड़ कर आगे बढ़ जाए भूतीया अगली बार रिबूट करने पर अपने आप गायब हो जाएगी। 
+>
 ```cmd
 mountvol y: /d
 ```
 
 
-## Boot into Windows
+## Windows में बूट करना 
 
-### Make a backup of your rooted boot image
+### इस cmd द्वारा रूट की हुई boot image का एक बैकअप बना लो 
 
 ```cmd
 adb shell "dd if=/dev/block/platform/soc/1d84000.ufshc/by-name/boot$(getprop ro.boot.slot_suffix) of=/tmp/rooted_boot.img" && adb pull /tmp/rooted_boot.img
 ```
 
-### Reboot to bootloader 
+### bootloader मे रिबूट करो
 
 ```cmd
 adb reboot bootloader
 ```
 
-### Download and flash the UEFI image
-> Download the [UEFI image](https://github.com/erdilS/Port-Windows-11-Xiaomi-Pad-5/releases/download/UEFI/uefi-v3.img)
+### UEFI image को डाउनलोड करके फ्लैश करो 
+>  [UEFI image](https://github.com/erdilS/Port-Windows-11-Xiaomi-Pad-5/releases/download/UEFI/uefi-v3.img) डाउनलोड करो 
 
 ```cmd
 fastboot flash boot <path to image>
 ```
 
-## Reboot to Windows
+## इस cmd से Windows मे रिबूट करो 
 ```cmd
 fastboot reboot
 ```
 
 > [!NOTE]
-> On the first Windows boot, it will not see any Wi-Fi networks. Restart your tablet by holding down the power button until it restarts. After the reboot, it will be fixed. If you get a pop-up saying "Could not connect", press retry until it works (usually 5 times)
+> पहले बूट पर, यह कोई wifi नेटवर्क नहीं दिखाएगा तो पावर बटन को कई देर तक दबा कर टेबलेट को रिबूट कर ले और आपको नेटवर्क दिखाई देने लग जायेगे। अगर अभी आपको एक popup दिखाई देता है जिसमें लिखा हुआ है "could not connect" तो लगभग 5 बार retry करे जब तक य़ह काम करने लगे 
 
-### Boot back into Android
-After Windows has been set up, press the restart button in Windows (NOT SHUTDOWN), then as it restarts, hold `volume down` + `power`to reboot back to fastboot
-> Use your backup boot image and flash it in fastboot to return to Android
+### एंड्रॉयड मे वापिस बूट करना 
+After Windows has been set up जेसे ही windows का सेटअप पूरा हो जाए,तो resart बटन को दबाये ना कि shutdown को जेसे ही ये रिस्टार्ट हो जाए पावर बटन और वॉल्युम कम करने के बटन को एक साथ दबा कर टेबलेट को fastboot मोड मे ले जाए। 
+> अब बैकअप की हुई बूट इमेज को फ्लैश करे जिससे आप फिर से एंड्रॉयड को एक्सेस कर पाए। 
 
 ```cmd
 fastboot flash boot rooted_boot.img
@@ -156,4 +156,4 @@ fastboot flash boot rooted_boot.img
 fastboot reboot
 ```
 
-### [Last step: Set up Dualboot](dualboot-en.md)
+### [आखिरी चरण : डुअल बूट को सेटअप करना](dualboot-en.md)
