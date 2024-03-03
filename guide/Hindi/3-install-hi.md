@@ -156,4 +156,4 @@ fastboot flash boot rooted_boot.img
 fastboot reboot
 ```
 
-### [आखिरी चरण : डुअल बूट को सेटअप करना](guide/Hindi/dualboot-en.md)
+### [आखिरी चरण : डुअल बूट को सेटअप करना](/guide/Hindi/dualboot-en.md)
