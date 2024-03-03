@@ -1,30 +1,31 @@
 <img align="right" src="https://raw.githubusercontent.com/erdilS/Port-Windows-11-Xiaomi-Pad-5/main/nabu.png" width="425" alt="Windows 11 Running On A Xiaomi Pad 5">
 
-# Running Windows on the Xiaomi Pad 5
+# Xiaomi Pad 5 पर चलती हुई windows 
 
-## UEFI Updating
+## UEFI अपडेट करना 
 > [!Warning]
-> If you are updating from the old UEFI (January 15 or before) to UEFI-V3, you also have to update your drivers, which you can do using the [driver updating guide](update-en.md)
+> अगर आप पुरानी UEFI(15 जनवरी से पहले वाली) से नई UEFI v3 मे अपडेट करना चाहते हो तो  आपको पहले Drivers भी अपडेट करनी होगी जो आप इस
+>  [driver updating guide](/guide/Hindi/update-hi.md) से कर सकते हो 
 
-### Why is this guide needed?
+### इस गाइड की जरूरत किसलिए है ?
 
-Idk, but some people were asking about it 
+क्युकि कुछ लोगों का दिमाग घुटनों मे है। 
 
-### Prerequisites
+### आवश्यक फाइल 
 - [```WOA Helper app```](https://github.com/erdilS/Port-Windows-11-Xiaomi-Pad-5/releases/download/dualboot/woahelper.apk)
   
-- [```Latest UEFI```](https://github.com/erdilS/Port-Windows-11-Xiaomi-Pad-5/releases/download/UEFI/uefi-v3.img)
+- [```नवीनतम UEFI```](https://github.com/erdilS/Port-Windows-11-Xiaomi-Pad-5/releases/download/UEFI/uefi-v3.img)
 
-## Replace old UEFI with the new one
-> If you haven't yet set up dualboot, follow the [dualboot guide](/guide/English/dualboot-en.md) to set up the WOA Helper properly
-- Boot to Android
-- Open the `UEFI` folder in your internal storage
-- Delete the old UEFI
-- Place the new one inside
+## पुरानी UFEI की जगह नयी UEFI डाल दो 
+> अगर आपने अभी तक डुअल बूट सेटअप नहीं किया है, तो इस [dualboot गाइड](/guide/Hindi/dualboot-hi.md) को पूर्ण करे 
+- एंड्रॉयड मे बूट करे 
+- अपने इन्टरनल स्टोरेज मे `UEFI` फ़ोल्डर को खोले 
+- पुरानी UEFI डिलीट कर दे 
+- नयी वाली UEFI v3 डाल दे 
 
-## Done, switch to Windows and enjoy 
+## हो गया अब windows चलाओ और मजे करो 
 
 > [!NOTE]
->  If you get a BSOD or Windows can't boot normally, make sure you're using the latest drivers and update them 
+> अगर आपको BSOD दिखता है या फिर windows सही से बूट नहीं होता है तो ये जरूर देख ले कि आपने लेटेस्ट Drivers इंस्टॉल कर रखी है  
 
 
